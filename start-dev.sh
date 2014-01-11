@@ -1,2 +1,1 @@
-unicorn -C config/unicorn.rb -D -E development
-/etc/init.d/nginx start
+unicorn -c config/unicorn.rb -D -E development

@@ -3,9 +3,13 @@
 worker_processes 2
 working_directory @base_dir
 timeout 30
+puts "Rack env: #{ENV['RACK_ENV']}"
 
+runon = "#{@base_dir}/tmp/sockets/unicorn.sock"
+runon = 8080 if ENV['RACK_ENV'] == 'development'
+puts "Running using: #{runon} and rack env: #{ENV['RACK_ENV']}"
 # Tell unicorn the socket to use. This will be used by NGINX
-listen "#{@base_dir}/tmp/sockets/unicorn.sock", :backlog => 64
+listen runon, :backlog => 64
 
 # Set PID file
 pid "#{@base_dir}/tmp/pids/unicorn.pid"
