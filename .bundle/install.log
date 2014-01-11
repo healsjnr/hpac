@@ -1,0 +1,18 @@
+# Logfile created on 2014-01-06 13:04:10 +0000 by logger.rb/36483
+I, [2014-01-06T13:04:10.253878 #12143]  INFO -- : 0:  kgio (2.8.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/kgio-2.8.1.gemspec
+I, [2014-01-06T13:04:10.254451 #12143]  INFO -- : 0:  rack (1.5.2) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/rack-1.5.2.gemspec
+I, [2014-01-06T13:04:11.229062 #12143]  INFO -- : 0:  rack-protection (1.5.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/rack-protection-1.5.1.gemspec
+I, [2014-01-06T13:04:11.229583 #12143]  INFO -- : 0:  raindrops (0.12.0) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/raindrops-0.12.0.gemspec
+I, [2014-01-06T13:04:12.320109 #12143]  INFO -- : 0:  tilt (1.4.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/tilt-1.4.1.gemspec
+I, [2014-01-06T13:04:14.985301 #12143]  INFO -- : 0:  sinatra (1.4.4) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/sinatra-1.4.4.gemspec
+I, [2014-01-06T13:04:14.985831 #12143]  INFO -- : 0:  unicorn (4.7.0) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/unicorn-4.7.0.gemspec
+I, [2014-01-06T13:04:14.986120 #12143]  INFO -- : 0:  bundler (1.5.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
+I, [2014-01-07T09:31:30.205802 #29780]  INFO -- : 0:  tilt (1.4.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/tilt-1.4.1.gemspec
+I, [2014-01-07T09:31:31.561483 #29780]  INFO -- : 0:  haml (4.0.4) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/haml-4.0.4.gemspec
+I, [2014-01-07T09:31:31.562152 #29780]  INFO -- : 0:  kgio (2.8.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/kgio-2.8.1.gemspec
+I, [2014-01-07T09:31:31.562603 #29780]  INFO -- : 0:  rack (1.5.2) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/rack-1.5.2.gemspec
+I, [2014-01-07T09:31:31.563057 #29780]  INFO -- : 0:  rack-protection (1.5.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/rack-protection-1.5.1.gemspec
+I, [2014-01-07T09:31:31.564701 #29780]  INFO -- : 0:  raindrops (0.12.0) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/raindrops-0.12.0.gemspec
+I, [2014-01-07T09:31:31.565099 #29780]  INFO -- : 0:  sinatra (1.4.4) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/sinatra-1.4.4.gemspec
+I, [2014-01-07T09:31:31.565490 #29780]  INFO -- : 0:  unicorn (4.7.0) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/unicorn-4.7.0.gemspec
+I, [2014-01-07T09:31:31.565831 #29780]  INFO -- : 0:  bundler (1.5.1) from /home/healsjnr/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/specifications/bundler-1.5.1.gemspec
