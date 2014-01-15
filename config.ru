@@ -1,6 +1,6 @@
-require "rubygems"
-require "sinatra"
+require 'rubygems'
+require 'sinatra/base'
 
-require "#{File.expand_path(File.dirname(__FILE__))}/lib/hpac_app.rb"
+Dir.glob('./lib/{models,helpers,controllers}/*.rb').each { |f| require f}
 
-run HpacApp
+map('/') {run WebsiteController}
