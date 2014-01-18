@@ -2,6 +2,8 @@
 require 'rubygems'
 require 'sass'
 require 'haml'
+require 'sinatra/activerecord'
+require './config/environment.rb'
 
 class HpacAppController < Sinatra::Base
 

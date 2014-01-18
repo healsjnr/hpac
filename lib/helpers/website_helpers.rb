@@ -3,13 +3,13 @@ module WebsiteHelpers
   def render_text(text)
     case text
     when :about_text
-     'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.'
+      Content.where(:page => 'main', :title => 'About?').first.content
     when :where_text
-      'Grand Hirafu, Niseko, Hokaido Japan.'
+      Content.where(:page => 'main', :title => 'Where?').first.content
     when :when_text
-      'Early January 2015.'
+      Content.where(:page => 'main', :title => 'When?').first.content
     when :who_text
-      'A list of speakers will be announced shortly.'
+      Content.where(:page => 'main', :title => 'Who?').first.content
     else 
       ''
     end
