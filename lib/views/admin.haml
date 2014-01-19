@@ -1,0 +1,8 @@
+%div.container
+  %h2 HPAC Administration 
+  %p Click on the links below to edit the page content.
+%div.container
+  -@contents.each do |page|  
+    %div.row
+      %div.container
+        %h4= "#{page.page}, #{page.title}"
