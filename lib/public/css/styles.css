@@ -2,15 +2,14 @@
   padding-top: 20px;
 }
 
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
 #main-footer {
   background-image: url(/img/homepage_footer_1170px.jpg); 
   height: 362px;
-}
-.navbar-inverse {
-  background-color: rgb(86, 61, 124);
-}
-.navbar-inverse .navbar-brand {
-  color: rgb(255,255,255);
 }
 
 .form-control {
@@ -27,9 +26,4 @@
   background: #cdbfe3;
 }
 
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: rgba(205, 191, 227, 1);
-}
+
