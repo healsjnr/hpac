@@ -9,19 +9,32 @@
       %a.navbar-brand{ :href=> "/"} HPAC
     %div.collapse.navbar-collapse
       %ul.nav.navbar-nav
-        -site_content_titles.each do |page, content|
-          -if content.length > 1
-            %li.dropdown
-              %a{ :href => '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown'}!= "#{page.capitalize} <b class=caret></b>"
-              %ul.dropdown-menu
-                -content.each do |id, title|
-                  %li
-                    %a{ :href =>  "#"}= title
-          -else 
-            %li
-              %a{:href => "#"}= content.values.first
+        -site_content_titles(:multiple).each do |page, content|
+          %li.dropdown
+            %a{ :href => '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown'}!= "#{page.capitalize} <b class=caret></b>"
+            %ul.dropdown-menu
+              -content.each do |id, title|
+                %li
+                  <!-- So apparently this is bad. I should instead be attaching an id to each href and 
+                  then attaching a delegate to the top level or something. Basically bad form to have javascript in the tag -->
+                  %a{ :href =>  "#", :onclick => "getContent('#{page}', '#{id}')"}= title
+        -site_content_titles(:single).each do |page, content|
+          %li
+            %a{:href => "#", :onclick => "getContent('#{page}', '#{content.keys.first}')" }= content.values.first
 <!--Links should execute Javascript that updates the contents of the input forms to match the content being edited -->
 <!--Post action posts to /admin/page/content_id with new data -->
 %div.container
   %h2 HPAC Administration 
-  %p Click on the links below to edit the page content.
+  %p Select a page or sectino from the meny bar above to edit.
+  %div.container
+    %form{ :action => "/admin/content", :method => "post", :role => "form" }
+      %div.row
+        %div.form-group
+          %label{ :for => "content-title" } Title:
+          %input{ :id => "content-title", :class => "form-control", :name => "content[title]", :type => "text", :value => "" }
+        %div.form-group
+          %label{ :for => "content-body" } Content:
+          %textarea{ :id => "content-body", :class => "form-control", :name => "content[body]", :rows => 15 }
+        %button{ :type => "submit", :class => "btn btn-success"} Submit
+            
+            

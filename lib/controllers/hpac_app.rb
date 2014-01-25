@@ -4,6 +4,7 @@ require 'sass'
 require 'haml'
 require 'sinatra/activerecord'
 require './config/environment.rb'
+require 'json'
 
 class HpacAppController < Sinatra::Base
 
