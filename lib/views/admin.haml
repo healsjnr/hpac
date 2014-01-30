@@ -21,13 +21,11 @@
         -site_content_titles(:single).each do |page, content|
           %li
             %a{:href => "#", :onclick => "getContent('#{page}', '#{content.keys.first}')" }= content.values.first
-<!--Links should execute Javascript that updates the contents of the input forms to match the content being edited -->
-<!--Post action posts to /admin/page/content_id with new data -->
 %div.container
   %h2 HPAC Administration 
   %p Select a page or sectino from the meny bar above to edit.
   %div.container
-    %form{ :action => "/admin/content", :method => "post", :role => "form" }
+    %form{ :id => 'content-form', :method => "post", :role => "form" }
       %div.row
         %div.form-group
           %label{ :for => "content-title" } Title:
@@ -36,5 +34,4 @@
           %label{ :for => "content-body" } Content:
           %textarea{ :id => "content-body", :class => "form-control", :name => "content[body]", :rows => 15 }
         %button{ :type => "submit", :class => "btn btn-success"} Submit
-            
-            
+

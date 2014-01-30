@@ -7,10 +7,17 @@ class AdminController < HpacAppController
     puts "Adding content routes:"
     # Add a get route for piece of content contained in that database 
     pages.each do |p|
-      self.get("/#{p.page.downcase}/#{p.content_id.to_s}", {}) { p.to_json }
-      puts "  GET /admin/#{p.page.downcase}/#{p.content_id.to_s} created."
+      url = "/#{p.page.downcase}/#{p.content_id.to_s}"
+      self.get(url, {}) do
+        p.reload
+        p.to_json 
+      end
+      puts "  GET #{url} created."
+      self.post(url, {}) do 
+        save_content p, params[:content] 
+      end
+      puts "  POST #{url} created."
     end
-
   end
   
   get '/' do
