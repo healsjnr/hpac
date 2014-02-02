@@ -1,4 +1,9 @@
-%div.container
-  -@content.each do |item|
-    %h2= item.title
-    %p= item.content
+= haml :_nav_menu, { :layout => false, :locals => { :page_type => 'normal' } }
+-@content.each do |item|
+  %div.jumbotron
+    %div.container
+      %h1= item.title
+  %div.container
+    %div.row
+      %div.container
+        = item.content

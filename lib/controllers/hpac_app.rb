@@ -7,6 +7,7 @@ require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'json'
 require './config/environment.rb'
+require './lib/helpers/hpac_helpers.rb'
 
 class HpacAppController < Sinatra::Base
 
@@ -15,5 +16,6 @@ class HpacAppController < Sinatra::Base
   enable :sessions, :method_override
   register Sinatra::Flash
   helpers Sinatra::RedirectWithFlash
+  helpers HpacHelpers
 
 end

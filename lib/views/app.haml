@@ -1,3 +1,4 @@
+= haml :_nav_menu, { :layout => false, :locals => { :page_type => 'normal' } }
 %div.jumbotron{id: 'hpac'}
   %div.container
     %h1 HPAC 2015
@@ -5,18 +6,22 @@
 %div.container
   %div.row
     %div.col-md-12
-      %h2 About
+      %h2= render_text(:main, :about_text, :title)
+      %a{ :name => :about_text}
       %p= render_text(:main, :about_text)
 %div.container  
   %div.row
     %div.col-md-4
-      %h2 Where? 
+      %h2= render_text(:main, :where_text, :title) 
+      %a{ :name => :where_text}
       %p= render_text(:main, :where_text) 
     %div.col-md-4
-      %h2 When?
+      %h2= render_text(:main, :when_text, :title) 
+      %a{ :name => :when_text}
       %p= render_text(:main, :when_text) 
     %div.col-md-4
-      %h2 Who?
+      %h2= render_text(:main, :who_text, :title)
+      %a{ :name => :who_text}
       %p= render_text(:main, :who_text)
 %div.container
   %div.row{id: 'main-footer'}
