@@ -1,6 +1,6 @@
 @base_dir = "#{File.expand_path(File.dirname(__FILE__))}/.."
 
-worker_processes 2
+worker_processes 1 
 working_directory @base_dir
 timeout 30
 puts "Rack env: #{ENV['RACK_ENV']}"

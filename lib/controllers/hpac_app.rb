@@ -1,15 +1,17 @@
-
+$:.unshift File.expand_path(File.join(File.dirname(__FILE__), '../..'))
 require 'rubygems'
 require 'sass'
 require 'haml'
+require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 require 'json'
-require './config/environment.rb'
-require './lib/helpers/hpac_helpers.rb'
+require 'lib/helpers/hpac_helpers.rb'
 
-class HpacAppController < Sinatra::Base
+class HpacAppController < Sinatra::Application
+
+  require 'config/environment.rb'
 
   set :root, File.expand_path('../..', __FILE__)
   set :views, File.expand_path('../../views', __FILE__)
@@ -19,3 +21,7 @@ class HpacAppController < Sinatra::Base
   helpers HpacHelpers
 
 end
+
+require 'lib/models/init.rb'
+require 'lib/helpers/init.rb'
+require 'lib/controllers/init.rb'

@@ -1,4 +1,4 @@
-class WebsiteController < HpacAppController
+class HpacAppController < Sinatra::Application
   
   helpers WebsiteHelpers
   
@@ -12,7 +12,6 @@ class WebsiteController < HpacAppController
     end
    
     puts "Adding content routes:"
-    # Add a get route for piece of content contained in that database 
     page_data.each do |page, data|
       next if page == 'main'
       url = "/#{page.downcase}"

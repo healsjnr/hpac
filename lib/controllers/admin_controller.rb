@@ -1,13 +1,13 @@
-class AdminController < HpacAppController
+class HpacAppController < Sinatra::Application 
   
   helpers AdminHelpers
 
   configure do
+    set :base_url, 'admin'
     set :pages, Content.all
-    puts "Adding content routes:"
-    # Add a get route for piece of content contained in that database 
+    puts 'Adding Admin content routes:'
     pages.each do |p|
-      url = "/#{p.page.downcase}/#{p.content_id.to_s}"
+      url = "/#{base_url}/#{p.page.downcase}/#{p.content_id.to_s}"
       self.get(url, {}) do
         p.reload
         p.to_json 
@@ -18,9 +18,10 @@ class AdminController < HpacAppController
       end
       puts "  POST #{url} created."
     end
+    puts '  Admin routes added.'
   end
-  
-  get '/' do
+
+  get "/#{base_url}" do
     @contents = Content.order(:page => :asc, :title => :asc)
     haml :admin, { :layout => :layout }
   end

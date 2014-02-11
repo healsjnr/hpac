@@ -13,7 +13,6 @@ module AdminHelpers
   end
 
   def site_content_titles content_type = :single 
-    puts "site_conent_titles called"
     contents = Content.order(:page => :asc, :title => :asc)
     titles = {}
     contents.each do |cont|

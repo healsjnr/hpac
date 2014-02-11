@@ -9,6 +9,12 @@ gem 'unicorn'
 gem 'haml'
 gem 'sass'
 
+group :test do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'machinist'
+end
+
 group :development do
   gem 'sqlite3'
   gem 'tux'
